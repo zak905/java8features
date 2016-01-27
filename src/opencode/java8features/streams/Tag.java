@@ -1,6 +1,4 @@
-
 package opencode.java8features.streams;
-
 
 public class Tag {
 	

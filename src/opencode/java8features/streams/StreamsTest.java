@@ -1,6 +1,8 @@
 package opencode.java8features.streams;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.OptionalDouble;
@@ -12,6 +14,7 @@ public class StreamsTest {
 	public static void main(String[] args){
 		
 		List<String> myList = Arrays.asList("yet","another", "proof", "that", "java8", "streams","rocks");
+		
 		
 		//Stream on a list of strings 
 		System.out.println("-----------Traversal and filtering----------");
@@ -43,8 +46,7 @@ public class StreamsTest {
 		
 		//Map
 		System.out.println("-----------grouping----------");
-		Map<TYPE, List<Tag>> map = 
-				tagsList.stream()
+		Map<TYPE, List<Tag>> map = tagsList.stream()
 		.collect(Collectors.groupingBy(Tag::getType));
 		
 		System.out.println(map);
